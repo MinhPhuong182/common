@@ -1,0 +1,61 @@
+{
+    "name": "PhamVi",
+    "fields": [
+        {
+            "fieldName": "donViCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "begin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "end",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "program",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "donVi",
+            "otherEntityRelationshipName": "phamvi",
+            "relationshipName": "donvi",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190327160405",
+    "entityTableName": "pham_vi",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "gateway",
+        "common"
+    ]
+}

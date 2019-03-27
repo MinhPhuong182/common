@@ -1,0 +1,62 @@
+{
+    "name": "NoiDung",
+    "fields": [
+        {
+            "fieldName": "noiDungCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chiTieuCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nhomDanhMucCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nhomNoiDungCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "program",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nhomNoiDung",
+            "otherEntityRelationshipName": "noiDung",
+            "relationshipName": "nhomnoidung",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190327160407",
+    "entityTableName": "noi_dung",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "gateway",
+        "common"
+    ]
+}

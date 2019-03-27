@@ -1,0 +1,67 @@
+{
+    "name": "NhomPhanLoai",
+    "fields": [
+        {
+            "fieldName": "nhomPhanLoaiCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "donCiCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "program",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "doiTuong",
+            "otherEntityRelationshipName": "nhomphanloai",
+            "relationshipName": "doituong"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "donVi",
+            "otherEntityRelationshipName": "nhomphanloai",
+            "relationshipName": "donvi",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190327160402",
+    "entityTableName": "nhom_phan_loai",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "gateway",
+        "common"
+    ]
+}
